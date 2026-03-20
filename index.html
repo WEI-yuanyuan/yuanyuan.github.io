@@ -61,8 +61,8 @@
 
   .research-narrative { font-size: 1.05rem; line-height: 1.85; color: #3e4350; max-width: 740px; margin-bottom: 2.8rem; }
   .research-narrative em { font-style: normal; color: var(--accent); font-weight: 500; }
-  .journey-flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; position: relative; margin-bottom: 2.5rem; }
-  .journey-flow::before { content: ''; position: absolute; top: 36px; left: 16.66%; right: 16.66%; height: 2px; background: linear-gradient(90deg, var(--sky), var(--accent), var(--warm)); opacity: 0.35; }
+  .journey-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; margin-bottom: 2.5rem; }
+  .journey-flow::before { content: ''; position: absolute; top: 36px; left: 12.5%; right: 12.5%; height: 2px; background: linear-gradient(90deg, #8b6faf, var(--sky), var(--accent), var(--warm)); opacity: 0.35; }
   .journey-step { text-align: center; padding: 0 0.8rem; position: relative; }
   .journey-dot { width: 12px; height: 12px; border-radius: 50%; margin: 30px auto 1rem; position: relative; z-index: 1; }
   .journey-step:nth-child(1) .journey-dot { background: var(--sky); box-shadow: 0 0 0 4px var(--sky-soft); }
@@ -153,7 +153,7 @@
     .hero-name { font-size: 2.2rem; }
     .hero-tagline { max-width: 100%; }
     .hero-meta { justify-content: center; }
-    .journey-flow { grid-template-columns: 1fr; gap: 1.5rem; }
+    .journey-flow { grid-template-columns: 1fr !important; gap: 1.5rem; }
     .journey-flow::before { display: none; }
     .stats-row { grid-template-columns: repeat(2, 1fr); }
     .exp-grid { grid-template-columns: 1fr; }
@@ -224,24 +224,30 @@
 
   <p class="research-narrative">A recurring theme across my work: powerful AI tools exist, but they rarely reach the biologists, clinicians, or patients who would benefit most. My research closes that gap — not by applying off-the-shelf models, but by building <em>domain-customized AI pipelines</em> that are trained and validated on our own lab-generated biological data, iteratively refined through closed-loop experimental feedback, and benchmarked to deliver field-leading performance. Equally important, I build <em>the first open benchmarks</em> in each domain I enter — from droplet microfluidics to AD-tau inhibitor compounds — so that others can build on this foundation. During my PhD, I developed training-free AI pipelines that brought foundation models into molecular diagnostics. Now at UCLA, I apply the same philosophy to designing small-molecule therapeutics for <em>Alzheimer's and Parkinson's disease</em>, where conventional drug discovery has repeatedly failed because existing AI models weren't built for the unique geometry of pathological protein fibrils.</p>
 
-  <div class="journey-flow">
+  <div class="journey-flow" style="grid-template-columns: repeat(4, 1fr);">
+    <div class="journey-step">
+      <div class="journey-dot" style="background: #8b6faf; box-shadow: 0 0 0 4px #ede5f5;"></div>
+      <div class="journey-era">2014 – 2018 · <strong>Tsinghua University</strong></div>
+      <div class="journey-title">Brain-Inspired Computing</div>
+      <div class="journey-desc">Contributed to the Tianjic chip — the world's first hybrid neuromorphic processor. Sparked my conviction that engineering must serve biological understanding.</div>
+    </div>
     <div class="journey-step">
       <div class="journey-dot"></div>
-      <div class="journey-era">2018 – 2023 · PhD at CUHK</div>
+      <div class="journey-era">2018 – 2023 · <strong>CUHK</strong></div>
       <div class="journey-title">AI × Droplet Microfluidics</div>
-      <div class="journey-desc">Deep learning pipelines for automated biological measurements — bridging AI with lab-on-chip systems for precision diagnostics. Built the first open benchmark database for droplet digital PCR.</div>
+      <div class="journey-desc">Deep learning pipelines for automated biological measurements. Built the first open benchmark database for droplet digital PCR.</div>
     </div>
     <div class="journey-step">
       <div class="journey-dot"></div>
-      <div class="journey-era">2023 – 2024 · Research Associate</div>
+      <div class="journey-era">2023 – 2024 · <strong>CUHK</strong></div>
       <div class="journey-title">Foundation Models × Diagnostics</div>
-      <div class="journey-desc">Pioneered zero-shot learning in molecular diagnostics (SAM-dPCR) — proving pre-trained AI achieves clinical accuracy without task-specific training.</div>
+      <div class="journey-desc">Pioneered zero-shot learning in molecular diagnostics (SAM-dPCR) — clinical accuracy without task-specific training.</div>
     </div>
     <div class="journey-step">
       <div class="journey-dot"></div>
-      <div class="journey-era">2024 – Present · UCLA</div>
+      <div class="journey-era">2024 – Present · <strong>UCLA</strong></div>
       <div class="journey-title">AI × Neurodegenerative Drug Discovery</div>
-      <div class="journey-desc">Building fibril-specific AI tools (FibrilBind, TauDiff, SSR-TauDiff) with patient-derived validation for Alzheimer's and Parkinson's therapeutics. Established the first curated compound benchmark for amyloid fibril inhibitors.</div>
+      <div class="journey-desc">Fibril-specific AI tools (FibrilBind, TauDiff, SSR-TauDiff) with patient-derived validation for Alzheimer's and Parkinson's. First curated compound benchmark for amyloid inhibitors.</div>
     </div>
   </div>
 
