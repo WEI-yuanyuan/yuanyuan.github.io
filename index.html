@@ -110,16 +110,14 @@
   .tag:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
 
   .life-intro { font-size: 1rem; color: #4a4f5a; max-width: 600px; margin-bottom: 2rem; line-height: 1.75; }
-  .photo-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: 190px 190px; gap: 0.7rem; margin-bottom: 2rem; }
-  .photo-cell { border-radius: 12px; display: flex; align-items: flex-end; padding: 1rem; position: relative; overflow: hidden; cursor: default; transition: transform 0.3s; }
+  .photo-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: 190px 190px 190px; gap: 0.7rem; margin-bottom: 2rem; }
+  .photo-cell { border-radius: 12px; display: flex; align-items: flex-end; padding: 1rem; position: relative; overflow: hidden; cursor: default; transition: transform 0.3s; background-size: cover; background-position: center; }
   .photo-cell:hover { transform: scale(1.015); }
-  .photo-cell::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.32) 100%); pointer-events: none; }
-  .photo-cell span { position: relative; z-index: 1; font-size: 0.8rem; font-weight: 600; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,0.3); }
-  .photo-cell:nth-child(1) { grid-column: 1 / 3; background: linear-gradient(135deg, #5994c4, #2e6eb5); }
-  .photo-cell:nth-child(2) { background: linear-gradient(135deg, #7ab5d4, #4a90b8); }
-  .photo-cell:nth-child(3) { background: linear-gradient(135deg, #d4a373, #c8956c); }
-  .photo-cell:nth-child(4) { background: linear-gradient(135deg, #a0b8d1, #7094b8); }
-  .photo-cell:nth-child(5) { grid-column: 3 / 5; background: linear-gradient(135deg, #c4a0d4, #9878b8); }
+  .photo-cell::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.45) 100%); pointer-events: none; }
+  .photo-cell span { position: relative; z-index: 1; font-size: 0.8rem; font-weight: 600; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,0.4); }
+  .photo-cell:nth-child(1) { grid-column: 1 / 3; }
+  .photo-cell:nth-child(7) { grid-column: 2 / 4; }
+  .photo-cell:nth-child(8) { grid-column: 4 / 5; }
   .life-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .life-tag { font-size: 0.85rem; padding: 0.4rem 1rem; border-radius: 20px; background: var(--white); border: 1px solid var(--rule); color: #4a4f5a; transition: all 0.2s; }
   .life-tag:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
@@ -160,9 +158,10 @@
     .journey-flow::before { display: none; }
     .stats-row { grid-template-columns: repeat(2, 1fr); }
     .exp-grid { grid-template-columns: 1fr; }
-    .photo-grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, 160px); }
+    .photo-grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(5, 150px); }
     .photo-cell:nth-child(1) { grid-column: 1 / 3; }
-    .photo-cell:nth-child(5) { grid-column: 1 / 3; }
+    .photo-cell:nth-child(7) { grid-column: 1 / 3; }
+    .photo-cell:nth-child(8) { grid-column: auto; }
     .nav-links { display: none; }
     .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 54px; left: 0; right: 0; background: rgba(252,251,249,0.97); padding: 1rem 1.5rem; gap: 0.8rem; border-bottom: 1px solid var(--rule); }
     .mobile-toggle { display: block; }
@@ -200,14 +199,14 @@
       <h1 class="hero-name">Yuanyuan Wei</h1>
       <p class="hero-tagline">I translate <strong>cutting-edge AI</strong> into tools that solve real biomedical problems — from <strong>molecular diagnostics</strong> to <strong>drug discovery for neurodegenerative diseases</strong>. Every pipeline I build is validated with lab-generated biological data through <strong>closed-loop iteration</strong>, benchmarked as <strong>field-leading performance</strong>, and released with the <strong>first open benchmarks</strong> in each domain to advance the community.</p>
       <div class="hero-meta">
-        <span>📧 <a href="mailto:yuanyuanwei@mednet.ucla.edu">yuanyuanwei@mednet.ucla.edu</a></span>
+        <span>📧 <a href="/cdn-cgi/l/email-protection#0d74786c6374786c637a68644d60686963687923786e616c23686978"><span class="__cf_email__" data-cfemail="92ebe7f3fcebe7f3fce5f7fbd2fff7f6fcf7e6bce7f1fef3bcf7f6e7">[email&#160;protected]</span></a></span>
         <span>🎓 <a href="https://scholar.google.com/citations?hl=zh-CN&user=K3Xmwr8AAAAJ" target="_blank">Google Scholar</a></span>
         <span>📄 <a href="https://www.ncbi.nlm.nih.gov/myncbi/yuanyuan.wei.4/bibliography/public/" target="_blank">PubMed</a></span>
         <span>💬 WeChat: Weiyy1415926</span>
       </div>
     </div>
     <div class="photo-wrap">
-      <img src="images/headshot.jpg" alt="Yuanyuan Wei" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+      <img src="images/headshot.jpg" alt="Yuanyuan Wei" style="width:100%;height:100%;object-fit:cover;border-radius:140px 140px 24px 24px;border:1px solid var(--rule);width:230px;height:290px;">
     </div>
   </div>
 </section>
@@ -346,19 +345,22 @@
   <div class="section-subtitle">The person behind the papers</div>
   <p class="life-intro">I believe the best science comes from a full life. When I'm not at the bench or debugging model architectures, you'll find me on a trail, in a kayak, or road-tripping to the next national park. I'm also passionate about mentorship — I've spent years coaching students and friends through academic and personal challenges, and I carry that same energy into everything I do.</p>
   <div class="photo-grid">
-    <div class="photo-cell"><span>🥾 Hiking adventures</span></div>
-    <div class="photo-cell"><span>🚴 Cycling</span></div>
-    <div class="photo-cell"><span>🛶 Kayaking</span></div>
-    <div class="photo-cell"><span>🏔️ National Parks</span></div>
-    <div class="photo-cell"><span>👥 Friends & Mentorship</span></div>
+    <div class="photo-cell" style="background-image:url('images/Hiking-photo-Yuanyuan.jpg');"><span>🥾 Hiking</span></div>
+    <div class="photo-cell" style="background-image:url('images/Cycling-activity-in-Hong-Kong.jpg');"><span>🚴 Cycling in Hong Kong</span></div>
+    <div class="photo-cell" style="background-image:url('images/Big-Bear-Lake.jpg');"><span>🏔️ Big Bear Lake</span></div>
+    <div class="photo-cell" style="background-image:url('images/Lab-gathering-with-supervisor-and-labmates.jpg');"><span>👥 Lab Family</span></div>
+    <div class="photo-cell" style="background-image:url('images/Talk-in-Tsinghua.jpg');"><span>🎤 Invited Talk at Tsinghua</span></div>
+    <div class="photo-cell" style="background-image:url('images/Travel-in-France.jpg');"><span>✈️ France</span></div>
+    <div class="photo-cell" style="background-image:url('images/Photo-with-Nobel-Laureate-Edvard-Moser.jpg');"><span>🏆 With Nobel Laureate Edvard Moser</span></div>
+    <div class="photo-cell" style="background-image:url('images/Photo-with-Nobel-Laureate-Gregg-Semenza.jpg');"><span>🏆 With Nobel Laureate Gregg Semenza</span></div>
   </div>
   <div class="life-tags">
     <span class="life-tag">🥾 Hiking</span>
     <span class="life-tag">🚴 Cycling</span>
-    <span class="life-tag">🛶 Kayaking</span>
     <span class="life-tag">🚗 Road Trips</span>
     <span class="life-tag">🏕️ National Parks</span>
     <span class="life-tag">✈️ Traveling</span>
+    <span class="life-tag">🎤 Invited Talks</span>
     <span class="life-tag">🤝 Mentorship & Coaching</span>
   </div>
 </section>
@@ -383,7 +385,7 @@
   <h2>Let's Connect</h2>
   <p>I'm on track toward a faculty position (2027–2028) and always open to collaborations, conversations, and new ideas.</p>
   <div class="contact-links">
-    <a href="mailto:yuanyuanwei@mednet.ucla.edu" class="c-link">Email</a>
+    <a href="/cdn-cgi/l/email-protection#6e171b0f00171b0f00190b072e030b0a000b1a401b0d020f400b0a1b" class="c-link">Email</a>
     <a href="https://www.ncbi.nlm.nih.gov/myncbi/yuanyuan.wei.4/bibliography/public/" target="_blank" class="c-link">PubMed</a>
     <a href="https://scholar.google.com/citations?hl=zh-CN&user=K3Xmwr8AAAAJ" target="_blank" class="c-link">Google Scholar</a>
     <a href="https://www.linkedin.com/in/yuanyuan-wei-73a855184/" target="_blank" class="c-link">LinkedIn</a>
@@ -392,7 +394,7 @@
 
 <footer>© 2026 Yuanyuan Wei · UCLA Department of Neurology · Last updated March 2026</footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const DANMAKU_COLORS = [
   'rgba(89,148,196,0.85)','rgba(78,130,190,0.85)','rgba(106,162,210,0.85)',
   'rgba(200,149,108,0.8)','rgba(160,136,190,0.8)','rgba(120,175,155,0.8)',
@@ -457,13 +459,4 @@ async function sendDanmaku() {
   try { const r = await window.storage.get('danmaku-messages'); if (r && r.value) msgs = JSON.parse(r.value); } catch (e) {}
   msgs.unshift(msg);
   if (msgs.length > 200) msgs = msgs.slice(0, 200);
-  try { await window.storage.set('danmaku-messages', JSON.stringify(msgs)); } catch (e) {}
-  document.getElementById('dm-name').value = '';
-  document.getElementById('dm-msg').value = '';
-}
-
-document.getElementById('dm-msg').addEventListener('keydown', e => { if (e.key === 'Enter') sendDanmaku(); });
-loadMessages();
-</script>
-</body>
-</html>
+  try { await window.storage.set('d
