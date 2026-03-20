@@ -110,14 +110,13 @@
   .tag:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
 
   .life-intro { font-size: 1rem; color: #4a4f5a; max-width: 600px; margin-bottom: 2rem; line-height: 1.75; }
-  .photo-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: 190px 190px 190px; gap: 0.7rem; margin-bottom: 2rem; }
+  .photo-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 185px; gap: 0.7rem; margin-bottom: 2rem; }
   .photo-cell { border-radius: 12px; display: flex; align-items: flex-end; padding: 1rem; position: relative; overflow: hidden; cursor: default; transition: transform 0.3s; background-size: cover; background-position: center; }
   .photo-cell:hover { transform: scale(1.015); }
   .photo-cell::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.45) 100%); pointer-events: none; }
   .photo-cell span { position: relative; z-index: 1; font-size: 0.8rem; font-weight: 600; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,0.4); }
   .photo-cell:nth-child(1) { grid-column: 1 / 3; }
-  .photo-cell:nth-child(7) { grid-column: 2 / 4; }
-  .photo-cell:nth-child(8) { grid-column: 4 / 5; }
+  .photo-cell:nth-child(8) { grid-column: 2 / 4; }
   .life-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .life-tag { font-size: 0.85rem; padding: 0.4rem 1rem; border-radius: 20px; background: var(--white); border: 1px solid var(--rule); color: #4a4f5a; transition: all 0.2s; }
   .life-tag:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
@@ -158,10 +157,9 @@
     .journey-flow::before { display: none; }
     .stats-row { grid-template-columns: repeat(2, 1fr); }
     .exp-grid { grid-template-columns: 1fr; }
-    .photo-grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(5, 150px); }
+    .photo-grid { grid-template-columns: 1fr 1fr; }
     .photo-cell:nth-child(1) { grid-column: 1 / 3; }
-    .photo-cell:nth-child(7) { grid-column: 1 / 3; }
-    .photo-cell:nth-child(8) { grid-column: auto; }
+    .photo-cell:nth-child(8) { grid-column: 1 / 3; }
     .nav-links { display: none; }
     .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 54px; left: 0; right: 0; background: rgba(252,251,249,0.97); padding: 1rem 1.5rem; gap: 0.8rem; border-bottom: 1px solid var(--rule); }
     .mobile-toggle { display: block; }
@@ -262,7 +260,7 @@
     <div class="pub-group-label">Foundation Models in Molecular Diagnostics (2023–2025)</div>
     <div class="pub-entry">
       <span class="me">Wei Y.</span>, Luo S., Xu C., et al. SAM-dPCR: Accurate and generalist nucleic acid quantification leveraging the zero-shot Segment Anything Model. <span class="journal">Advanced Science</span>, 2024, 2406797.
-      <a href="https://pubmed.ncbi.nlm.nih.gov/39400494/" target="_blank">[PubMed]</a>
+      <a href="https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/advs.202406797" target="_blank">[Paper]</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11831435/" target="_blank">[PMC]</a>
     </div>
     <div class="pub-entry">
       <span class="me">Wei Y.</span>, Liu X., Xu C., et al. From droplets to diagnosis: AI-driven imaging and system integration in digital nucleic acid amplification testing. <span class="journal">Biosensors and Bioelectronics</span>, 2025, 117741.
@@ -315,8 +313,8 @@
     <div>
       <div class="timeline">
         <div class="tl-item"><div class="tl-date">2024 – present</div><div class="tl-role">Postdoctoral Scholar</div><div class="tl-place">Dept. of Neurology, UCLA David Geffen School of Medicine</div><div class="tl-place" style="color: var(--accent); font-size: 0.84rem; margin-top: 0.2rem;">Mentors: Chao Peng · Wei Wang</div></div>
-        <div class="tl-item"><div class="tl-date">2023 – 2024</div><div class="tl-role">Research Associate</div><div class="tl-place">Dept. of Biomedical Engineering, CUHK</div></div>
-        <div class="tl-item"><div class="tl-date">2018 – 2023</div><div class="tl-role">Ph.D. in Biomedical Engineering</div><div class="tl-place">The Chinese University of Hong Kong</div></div>
+        <div class="tl-item"><div class="tl-date">2023 – 2024</div><div class="tl-role">Research Associate</div><div class="tl-place">Dept. of Biomedical Engineering, CUHK</div><div class="tl-place" style="color: var(--accent); font-size: 0.84rem; margin-top: 0.2rem;">Supervisor: Wu Yuan</div></div>
+        <div class="tl-item"><div class="tl-date">2018 – 2023</div><div class="tl-role">Ph.D. in Biomedical Engineering</div><div class="tl-place">The Chinese University of Hong Kong</div><div class="tl-place" style="color: var(--accent); font-size: 0.84rem; margin-top: 0.2rem;">Advisor: Aaron Ho-Pui Ho</div></div>
         <div class="tl-item"><div class="tl-date">2014 – 2018</div><div class="tl-role">B.S. in Precision Instrument</div><div class="tl-place">Tsinghua University, Beijing</div></div>
       </div>
     </div>
@@ -351,8 +349,10 @@
     <div class="photo-cell" style="background-image:url('images/Lab-gathering-with-supervisor-and-labmates.jpg');"><span>👥 Lab Family</span></div>
     <div class="photo-cell" style="background-image:url('images/Talk-in-Tsinghua.jpg');"><span>🎤 Invited Talk at Tsinghua</span></div>
     <div class="photo-cell" style="background-image:url('images/Travel-in-France.jpg');"><span>✈️ France</span></div>
+    <div class="photo-cell" style="background-image:url('images/Family-photo-with-parents-in-Thailand.jpg');"><span>👨‍👩‍👧 Family in Thailand</span></div>
     <div class="photo-cell" style="background-image:url('images/Photo-with-Nobel-Laureate-Edvard-Moser.jpg');"><span>🏆 With Nobel Laureate Edvard Moser</span></div>
     <div class="photo-cell" style="background-image:url('images/Photo-with-Nobel-Laureate-Gregg-Semenza.jpg');"><span>🏆 With Nobel Laureate Gregg Semenza</span></div>
+    <div class="photo-cell" style="background-image:url('images/Talk-in-CUHK.jpg');"><span>🎤 Invited Talk at CUHK</span></div>
   </div>
   <div class="life-tags">
     <span class="life-tag">🥾 Hiking</span>
